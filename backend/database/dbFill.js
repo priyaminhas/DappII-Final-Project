@@ -84,7 +84,7 @@ function createUser({name,password,address,userType},cb){
                 console.log(`Added user: ${address}`);
             })
             .catch(err => {
-                console.log('Ooppss...user', err);
+                console.log('Ooppss...user creation error', err);
             })
         }
         cb(null, newUser);
@@ -104,9 +104,9 @@ function createCandidate({name,partyName},cb){
 
 function populateCandidates(cb){
     let candidatesArr = [];
-    for(i=1;i<totalCandidates;i++){
-        var candidateName = 'candidate'+i;
-        var pName = 'party'+i;
+    for(i=1;i<=totalCandidates;i++){
+        const candidateName = 'candidate'+i;
+        const pName = 'party'+i;
         candidatesArr.push(
             (cb) => {
                 contract.methods.addCandidate(
@@ -121,13 +121,12 @@ function populateCandidates(cb){
                     },cb)
                 })
                 .catch(err => {
-                    console.log(`Error in Candidate${i} creation`);
+                    console.log(`Error in Candidate${i} creation`+err);
                 })
                 .finally(() => cb())
             }
         )
     }
-    console.log(candidatesArr);
     async.series(candidatesArr, cb);
 }
 async.series([
