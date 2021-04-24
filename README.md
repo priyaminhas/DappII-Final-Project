@@ -49,8 +49,8 @@ candidates/vote | POST | Candidate Id | Vote | Message
 # How to Run #
 Clone the repo in the folder you want using command prompt
 
-`git clone https://github.com/priyaminhas/DappII-Final-Project.git
-cd  DappII-Final-Project`
+`git clone https://github.com/priyaminhas/DappII-Final-Project.git`
+`cd  DappII-Final-Project`
 
 A .env file needed to be added at backend folder with the following data in it
 `PORT=5000
