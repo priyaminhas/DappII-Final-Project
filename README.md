@@ -33,6 +33,10 @@ The following diagram shows the sequence diagram of the current milestone.
 |Function Name	|Function Visibility	|Function mutability |	Modifiers	|Parameters	| Action - Notes|
 |-------------- |:------------------- |: ----------------- |: --------- |:----------|: -------------|
 
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
 
 # How to Run #
 Clone the repo in the folder you want using command prompt
