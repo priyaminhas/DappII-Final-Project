@@ -28,11 +28,17 @@ You can check the above diagram [here](https://github.com/priyaminhas/DappII-Fin
 The following diagram shows the sequence diagram of the current milestone.
 ![Sequence_Diagram](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/Sequence_diagram_voting.png) 
 
+# Chaincode functions #
+
+|Function Name	|Function Visibility	|Function mutability |	Modifiers	|Parameters	| Action - Notes|
+|-------------- |:------------------- |: ----------------- |: --------- |:----------|: -------------|
+
+
 # How to Run #
 Clone the repo in the folder you want using command prompt
 
-`git clone https://github.com/priyaminhas/DappII-Final-Project.git`
-`cd  DappII-Final-Project`
+`git clone https://github.com/priyaminhas/DappII-Final-Project.git
+cd  DappII-Final-Project`
 
 A .env file needed to be added at backend folder with the following data in it
 `PORT=5000
@@ -43,3 +49,29 @@ BLOCKCHAIN_EMULATOR_URI="http://127.0.0.1:9545/"
 `
 
 Then open three terminals to run the blockchain emulator, frontend and backend.
+
+For the frontend
+`cd frontend
+npm install
+npm run start`
+
+For the backend
+`cd backend
+npm install
+#To populate the mongodb with test data
+npm run populate
+npm run start`
+
+For truffle to start
+`cd smart_contract
+truffle develop
+migrate`
+
+
+The Credentials for admin are as follows:
+admin/admin123
+
+And the credentials for users are as follows:
+user1/user123
+user2/user123
+
