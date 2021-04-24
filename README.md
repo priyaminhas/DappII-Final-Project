@@ -28,7 +28,7 @@ You can check the above diagram [here](https://github.com/priyaminhas/DappII-Fin
 The following diagram shows the sequence diagram of the current milestone.
 ![Sequence_Diagram](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/Sequence_diagram_voting.png) 
 
-# Chaincode functions #
+# Smart Contract functions #
 
 Function Name | Function Visibility | Function mutability | Modifiers | Parameters | Action - Notes
 --- | --- | --- | --- | --- | ---
@@ -36,7 +36,15 @@ Function Name | Function Visibility | Function mutability | Modifiers | Paramete
  totalVotes |	Public	| N/A	| N/A |	cId – candidate Id	| Returns the total number of the Votes given to the particular candidate
  addCandidate	| Public |	N/A	| onlyOwner	| name – Candidate name partyName – Party Name	| - gets the number of candidates already created - creates a new candidate with the name and party name passed as parameter - notifies when candidate is created
 vote |	Public |	N/A	| N/A |	uId – user Id cId – candidate Id	| Adds a new vote from the user to the candidate mentioned as the candidate Id
+addUser |	Public |	N/A	| onlyOwner	| user – address of the user |	Setting up the user address for USER_ROLE
 
+# API Routes #
+
+END Point | Method | Params | Smart Contract Functions | Returns
+--- | --- | --- | --- | --- 
+users/login | POST | username, password | --- | - JWT - user address - user type
+candidates/all | GET | --- | --- | - All Candidates
+candidates/vote | POST | Candidate Id | Vote | Message
 
 # How to Run #
 Clone the repo in the folder you want using command prompt
