@@ -69,7 +69,9 @@ npm run start`
 
 For the backend
 `cd backend
+
 npm install
+
 #To populate the mongodb with test data
 npm run populate
 npm run start`
