@@ -34,12 +34,8 @@ Function Name | Function Visibility | Function mutability | Modifiers | Paramete
 --- | --- | --- | --- | --- | ---
  constructor | public | N/A | N/A | N/A | Sets the owner as msg.sender 
  totalVotes |	Public	| N/A	| N/A |	cId – candidate Id	Returns the total number of the Votes given to the particular candidate
- addCandidate	| Public |	N/A	| onlyOwner	| name – Candidate name
-partyName – Party Name	| - gets the number of candidates already created
-- creates a new candidate with the name and party name passed as parameter
-- notifies when candidate is created
-vote |	Public |	N/A	| N/A |	uId – user Id
-cId – candidate Id	| Adds a new vote from the user to the candidate mentioned as the candidate Id
+ addCandidate	| Public |	N/A	| onlyOwner	| name – Candidate name partyName – Party Name	| - gets the number of candidates already created - creates a new candidate with the name and party name passed as parameter - notifies when candidate is created
+vote |	Public |	N/A	| N/A |	uId – user Id cId – candidate Id	| Adds a new vote from the user to the candidate mentioned as the candidate Id
 
 
 # How to Run #
