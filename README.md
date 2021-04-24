@@ -30,11 +30,10 @@ The following diagram shows the sequence diagram of the current milestone.
 
 # Chaincode functions #
 
-|Function Name	|Function Visibility	|Function mutability |	Modifiers	|Parameters	| Action - Notes|
-|-------------- |:------------------- |: ----------------- |: --------- |:----------|: -------------|
-
 Function Name | Function Visibility | Function mutability | Modifiers | Parameters | Action - Notes
 --- | --- | --- | --- | --- | ---
+ constructor | public | N/A | N/A | N/A | Sets the owner as msg.sender 
+ 
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
