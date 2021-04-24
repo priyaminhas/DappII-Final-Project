@@ -28,3 +28,6 @@ You can check the above diagram [here](https://github.com/priyaminhas/DappII-Fin
 The following diagram shows the sequence diagram of the current milestone.
 ![Sequence_Diagram](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/Sequence_diagram_voting.png) 
 
+# How to Run #
+Clone the repo in the folder you want using command prompt
+`git clone https://github.com/priyaminhas/DappII-Final-Project.git`
