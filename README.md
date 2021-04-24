@@ -13,4 +13,4 @@ The conventional methods of voting such are Electronic Voting Machines or Ballot
 5. Environment Friendly  
 
 # Work Flow of the project #
-=============================================================================================================================================================================
+=============================
