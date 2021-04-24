@@ -14,3 +14,4 @@ The conventional methods of voting such are Electronic Voting Machines or Ballot
 
 # Work Flow of the project #
 
+![alt text](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/flowchart_milestone.png)
