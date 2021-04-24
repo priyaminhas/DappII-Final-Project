@@ -14,4 +14,17 @@ The conventional methods of voting such are Electronic Voting Machines or Ballot
 
 # Work Flow of the project #
 
-![alt text](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/flowchart_milestone.png) 
+![flowdiagram](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/flowchart_milestone.png) 
+
+The above diagram explains the workflow of the current and the future milestones. Here are the steps involved in the current milestone:
+1. There are two types of users in the system an Admin and a user or voter.
+2. Admin can login to the system to view the users, the candidates in the system and the total number of votes given to the candidates in a pie chart.
+3. The user can login to the system with their username and password. They can view all the candidates present in the system and vote for any candidate which will be saved in the blockchain.
+4. In future milestones users can login with their biometric identity as well as they can update their votes on a later stage.
+
+You can check the above diagram [here](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/flowchart_milestone.png)
+
+# Sequence Diagram #
+The following diagram shows the sequence diagram of the current milestone.
+![Sequence_Diagram](https://github.com/priyaminhas/DappII-Final-Project/blob/master/project_documents/Sequence_diagram_voting.png) 
+
