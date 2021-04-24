@@ -33,8 +33,8 @@ The following diagram shows the sequence diagram of the current milestone.
 |Function Name	|Function Visibility	|Function mutability |	Modifiers	|Parameters	| Action - Notes|
 |-------------- |:------------------- |: ----------------- |: --------- |:----------|: -------------|
 
-Markdown | Less | Pretty
---- | --- | ---
+Function Name | Function Visibility | Function mutability | Modifiers | Parameters | Action - Notes
+--- | --- | --- | --- | --- | ---
 *Still* | `renders` | **nicely**
 1 | 2 | 3
 
