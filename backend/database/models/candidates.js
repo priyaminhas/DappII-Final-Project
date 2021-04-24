@@ -9,6 +9,9 @@ const candidateSchema = Schema({
     partyName: {
         type: String,
         required: true
+    },
+    votes:{
+        type: Number
     }
 });
 

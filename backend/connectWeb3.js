@@ -17,9 +17,7 @@ let web3, contract, accounts;
 
 const connectWeb3 = {
     async voteCandidate(currentOwnerAddress ,name,userId){
-        console.log("val");
-        const val = await contract.methods.getNumOfVoters().call({ from: currentOwnerAddress });
-console.log(val);
+       return 1;
         return await contract.methods
         .getNumOfVoters()
         .call({ from: currentOwnerAddress });

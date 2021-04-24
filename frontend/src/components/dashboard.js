@@ -2,7 +2,7 @@ import React,{ useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import Candidate from './candidate';
-import Login from './login';
+import CandidateVotes from './candidateVotes';
 import '../Dashboard.css';
 
 function Dashboard(){
@@ -59,6 +59,7 @@ function Dashboard(){
                         </div>
                         <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
                             {history.location.pathname == '/dashboard/candidates' ? <Candidate /> : ''}
+                            {history.location.pathname == '/dashboard/candidatesVote' ? <CandidateVotes /> : ''}
                         </div> 
                     </main>
                 </div>

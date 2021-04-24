@@ -1,8 +1,10 @@
 import React, {useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import api from '../services/api';
+import { useCookies } from 'react-cookie';
 function Candidate() {
     const [candidateArr, setcandidateArr] = useState([]);
+    const [ cookies] = useCookies();
     let history = useHistory();
     useEffect(() => {
         try{ 
@@ -25,12 +27,16 @@ function Candidate() {
         }
     },[]);
    
-    const handleVote = (name) => {
-        console.log(name);
+    const handleVote = (name,id) => {
         try{
-            api.post('/candidates/vote',{name}).then(res => {
+            api.post('/candidates/vote',{name,id}).then(res => {
                 if(res.status === 200){
-                    console.log(res);
+                    //console.log(res);
+                    if(res.data.vote==1){
+                        //disable vote buttons 
+                        
+                    }
+                    alert(res.data.message);
                 }else{
                     
                 }
@@ -55,7 +61,9 @@ function Candidate() {
                                 <div className="card-body">
                                 <h5 className="card-title">{candidate.name}</h5>
                                 <p className="card-text">{candidate.partyName} </p>
-                                <a href="#" onClick={() => handleVote(candidate.name)} className="btn btn-primary" id={candidate._id}>Vote</a>
+                             
+                                <a href="#"   onClick={() => handleVote(candidate.name,candidate._id)} className="btn btn-primary" id={candidate._id}>Vote</a>
+                                    
                                 </div>
                             </div>
                     ))}

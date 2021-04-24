@@ -15,6 +15,7 @@ function App(){
             <Route path='/login' exact component={Login} />
             <Route path='/dashboard' exact component={Dashboard} />
             <Route path='/dashboard/candidates' exact component={Dashboard} />
+            <Route path='/dashboard/candidatesVote' exact component={Dashboard} />
           </Switch>
         </BrowserRouter>
       </div>
