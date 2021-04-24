@@ -30,4 +30,16 @@ The following diagram shows the sequence diagram of the current milestone.
 
 # How to Run #
 Clone the repo in the folder you want using command prompt
+
 `git clone https://github.com/priyaminhas/DappII-Final-Project.git`
+`cd  DappII-Final-Project`
+
+A .env file needed to be added at backend folder with the following data in it
+`PORT=5000
+MONGODB_URI_DEV="mongodb://localhost:27017"
+MONGODB_URI_TEST="YOUR_TEST_MONGO_URI"
+PRIVATE_KEY=""
+BLOCKCHAIN_EMULATOR_URI="http://127.0.0.1:9545/"
+`
+
+Then open three terminals to run the blockchain emulator, frontend and backend.
