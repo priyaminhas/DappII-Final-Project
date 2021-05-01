@@ -44,3 +44,19 @@ exports.vote =  async (req,res,next) => {
         return next(err);
     });
 }
+
+exports.add = async(req,res,next) => {
+    const candidate_name = req.body.candidate_name;
+    const party_name = req.body.party_name;
+    var candidateObj = {name:candidate_name,partyName:party_name,votes:0};
+   
+    const newCandidate = new candidateModel(candidateObj);
+    newCandidate.save(function(err){
+        if(err){
+            cb(err,null); 
+            return;  
+        }
+        res.json({ message:"New Candidate Created:"+newCandidate.name,added:1});
+    });
+    return 1;  
+} 

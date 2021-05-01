@@ -6,19 +6,31 @@ import api from '../services/api';
 function CandidateVotes(){
     const [candidateArr, setcandidateArr] = useState([]);
     let history = useHistory();
-    let data=[];
-    var finalObj;
+    let dataChart=[];
+    let activities = [
+        ['Candidate','votes'],
+        ['candidate1', 15],
+        ['candidate2', 6],
+        ['candidate3', 7],
+    ];
     useEffect(() => {
         api.get('/candidates/all', { withCredentials: true }).then(res => {
                 if (res.status === 200) {
                     setcandidateArr(res.data);
-                    data.push(['Candidates', 'Votes']);
-                  //  data['Candidates'] = 'Votes'
-                    candidateArr.forEach(element => 
-                                data.push([element.name,element.votes] )                          
-                        );
-                   //  finalObj = JSON.stringify(data);
-                        console.log(data);
+                   // var obj =  new Array("Candidates",'Votes'); // {} will create an object
+                   dataChart[0] =new Array("Candidates",'Votes'); 
+                   // console.log(data+"dats");
+                    var i=1;
+                    candidateArr.forEach(function(element){
+                       
+                        var name = element.name;
+                        var votes = element.votes? element.votes :0 ;
+                        var obj = new Array(name,votes); // {} will create an object
+                    // data.push(['Candidates', 'Votes']);
+                    dataChart[i]= obj;
+                        i++;  
+                    });
+                        console.log(dataChart+"dats");
                 } else {
                    // history.push('/error');
                     //return function cleanup() { }
@@ -40,7 +52,7 @@ function CandidateVotes(){
   height={'300px'}
   chartType="PieChart"
   loader={<div>Loading Chart</div>}
-  data={[['Candidates', 'Votes'], ["candidate1", 14], ["candidate2", 6],["candidate3", 6]]}
+  data={activities}
   options={{
     title: 'Voting Data',
   }}

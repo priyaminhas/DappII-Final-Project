@@ -9,4 +9,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 router.post('/login', userValidator.login, validate, userController.login);
+router.get('/all', userController.all);
+router.post('/add', userController.add);
 module.exports = router;
+ 

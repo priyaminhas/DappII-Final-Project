@@ -26,3 +26,26 @@ exports.login = async (req, res) => {
     const userJWT = jwt.sign({ name }, process.env.PRIVATE_KEY, { algorithm: 'HS256' });
     res.status(200).json({ userJWT, address: user.address, userType: user.userType, userId: user._id });
 }
+
+exports.all = async (req,res) => {
+    const users = await usersModel.find();
+    console.log(users);
+    res.status(200).json(users);
+}
+
+exports.add =  async (req,res) => {
+    const user_name = req.body.user_name;
+    const user_type = req.body.user_type; 
+    const password = user_name+"123";
+    var userObj = {name:user_name,userType:user_type,password:password};
+   
+    const newUser = new usersModel(userObj);
+    newUser.save(function(err){
+        if(err){
+            cb(err,null); 
+            return;  
+        }
+        res.json({ message:"New User Created:"+newUser.name,added:1});
+    });
+    return 1; 
+}

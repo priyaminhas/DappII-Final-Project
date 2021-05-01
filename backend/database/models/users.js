@@ -12,10 +12,9 @@ const UserSchema = Schema({
         type: String,
         required: true,
     },
-    address: {
-        type: String,
-        required: true
-    },
+    address: { 
+        type: String
+    }, 
     registration_date: {
         type: Date,
         required: true,
